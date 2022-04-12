@@ -4,6 +4,7 @@ data "aws_security_group" "default" {
     name   = "group-name"
     values = ["default"] 
   }
+}
 
 resource "aws_security_group" "optional" {
   count = var.enable_sg ? 1 : 0
